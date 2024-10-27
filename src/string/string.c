@@ -4,7 +4,6 @@
 
 char *strcpy(char *destination, const char *source)
 {
-	/* TODO: Implement strcpy(). */
 	int i = 0;
 	while(source[i] != '\0') {
 		destination[i] = source[i];
@@ -16,7 +15,6 @@ char *strcpy(char *destination, const char *source)
 
 char *strncpy(char *destination, const char *source, size_t len)
 {
-	/* TODO: Implement strncpy(). */
 	for (size_t i = 0; i < len; ++i)
 		destination[i] = source[i];
 	return destination;
@@ -24,7 +22,6 @@ char *strncpy(char *destination, const char *source, size_t len)
 
 char *strcat(char *destination, const char *source)
 {
-	/* TODO: Implement strcat(). */
 	size_t len1 = strlen(destination);
 	size_t len2 = strlen(source);
 	size_t i = len1;
@@ -38,7 +35,6 @@ char *strcat(char *destination, const char *source)
 
 char *strncat(char *destination, const char *source, size_t len)
 {
-	/* TODO: Implement strncat(). */
 	size_t len1 = strlen(destination);
 	size_t len2 = strlen(source);
 	size_t i = len1;
@@ -53,7 +49,6 @@ char *strncat(char *destination, const char *source, size_t len)
 
 int strcmp(const char *str1, const char *str2)
 {
-	/* TODO: Implement strcmp(). */
 	while (*str1 && *str2 && *str1 == *str2) {
 		str1++;
 		str2++;
@@ -63,7 +58,6 @@ int strcmp(const char *str1, const char *str2)
 
 int strncmp(const char *str1, const char *str2, size_t len)
 {
-	/* TODO: Implement strncmp(). */
 	while (*str1 && *str1 == *str2 && len) {
 		str1++;
 		str2++;
@@ -86,7 +80,6 @@ size_t strlen(const char *str)
 
 char *strchr(const char *str, int c)
 {
-	/* TODO: Implement strchr(). */
 	while(*str != 0) {
 		if (*str == c)
 			return (char *)str;
@@ -109,7 +102,6 @@ char *strrchr(const char *str, int c)
 
 char *strstr(const char *haystack, const char *needle)
 {
-	/* TODO: Implement strstr(). */
 	int len1 = strlen(haystack);
 	int len2 = strlen(needle);
 	for (int i = 0; (i < len1) && (i + len2 <= len1); ++i) {
@@ -125,7 +117,6 @@ char *strstr(const char *haystack, const char *needle)
 
 char *strrstr(const char *haystack, const char *needle)
 {
-	/* TODO: Implement strrstr(). */
 	int len1 = strlen(haystack);
 	int len2 = strlen(needle);
 	const char *last = NULL;
@@ -152,7 +143,6 @@ void *memcpy(void *destination, const void *source, size_t num)
 
 void *memmove(void *destination, const void *source, size_t num)
 {
-	/* TODO: Implement memmove(). */
 	char *dest = (char *)destination;
 	char *src = (char *)source;
 	for (size_t i = 0; i < num; ++i)
@@ -162,7 +152,6 @@ void *memmove(void *destination, const void *source, size_t num)
 
 int memcmp(const void *ptr1, const void *ptr2, size_t num)
 {
-	/* TODO: Implement memcmp(). */
 	char *aux1 = (char *)ptr1;
 	char *aux2 = (char *)ptr2;
 	for (size_t i = 0; i < num; ++i) {
@@ -176,7 +165,6 @@ int memcmp(const void *ptr1, const void *ptr2, size_t num)
 
 void *memset(void *source, int value, size_t num)
 {
-	/* TODO: Implement memset(). */
 	void *start = source;
 	for (size_t i = 0; i < num; ++i) {
 		*(unsigned char *)source = value;
